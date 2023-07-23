@@ -1,3 +1,5 @@
+namespace Dodge;
+
 public partial class HUD : CanvasLayer {
   // Don't forget to rebuild the project so the editor knows about the new signal.
 
