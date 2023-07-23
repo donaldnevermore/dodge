@@ -1,5 +1,3 @@
-using Godot;
-
 public partial class Player : Area2D {
   // Don't forget to rebuild the project so the editor knows about the new signal.
 
