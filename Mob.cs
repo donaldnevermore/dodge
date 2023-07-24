@@ -1,5 +1,4 @@
-using Godot;
-using System;
+namespace Dodge;
 
 public partial class Mob : RigidBody2D {
   // Called when the node enters the scene tree for the first time.
@@ -13,7 +12,5 @@ public partial class Mob : RigidBody2D {
   public override void _Process(double delta) {
   }
 
-  private void OnVisibleOnScreenNotifier2DScreenExited() {
-    QueueFree();
-  }
+  private void OnVisibleOnScreenNotifier2DScreenExited() => QueueFree();
 }

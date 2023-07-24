@@ -1,4 +1,4 @@
-using Godot;
+namespace Dodge;
 
 public partial class HUD : CanvasLayer {
   // Don't forget to rebuild the project so the editor knows about the new signal.
@@ -28,16 +28,13 @@ public partial class HUD : CanvasLayer {
     GetNode<Button>("StartButton").Show();
   }
 
-  public void UpdateScore(int score) {
+  public void UpdateScore(int score) =>
     GetNode<Label>("ScoreLabel").Text = score.ToString();
-  }
 
   private void OnStartButtonPressed() {
     GetNode<Button>("StartButton").Hide();
     EmitSignal(SignalName.StartGame);
   }
 
-  private void OnMessageTimerTimeout() {
-    GetNode<Label>("Message").Hide();
-  }
+  private void OnMessageTimerTimeout() => GetNode<Label>("Message").Hide();
 }
